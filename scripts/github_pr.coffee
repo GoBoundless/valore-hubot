@@ -15,6 +15,6 @@ module.exports = (robot) ->
     # robot.send {room: "kevinmook"}, "#{title} ... #{body}"
   
   
-    robot.send {room: "kevinmook"}, req.body
+    robot.send {room: "kevinmook"}, "I got a request from the webhook"
   
     res.send 'OK'
