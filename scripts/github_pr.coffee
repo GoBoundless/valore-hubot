@@ -7,11 +7,14 @@
 module.exports = (robot) ->
 
   robot.router.post '/github/webhook', (req, res) ->
-    data   = JSON.parse req.body.payload
+    # data   = JSON.parse req.body.payload
   
-    title = data?.pull_request?.title
-    body = data?.pull_request?.body
+    # title = data?.pull_request?.title
+    # body = data?.pull_request?.body
   
-    robot.send {room: "kevinmook"}, "#{title} ... #{body}"
+    # robot.send {room: "kevinmook"}, "#{title} ... #{body}"
+  
+  
+    robot.send {room: "kevinmook"}, req.body.payload
   
     res.send 'OK'
