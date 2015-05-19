@@ -15,6 +15,6 @@ module.exports = (robot) ->
     # robot.send {room: "kevinmook"}, "#{title} ... #{body}"
   
   
-    robot.send {room: "kevinmook"}, req.body.payload
+    robot.send {room: "kevinmook"}, req.body
   
     res.send 'OK'
